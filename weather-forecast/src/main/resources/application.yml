@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+   redis:
+      host: 127.0.0.1
+      port: 6379
+      password:
+thymeleaf:
+    cache: false
+WEATHER_URL_BY_CITYID: http://wthrcdn.etouch.cn/weather_mini?citykey=
+WEATHER_URL_BY_CITYNAME: http://wthrcdn.etouch.cn/weather_mini?city=
+CITY_LIST_URL: http://mobile.weather.com.cn/js/citylist.xml
+REDIS_EVIT_TIME: 1800

@@ -1,0 +1,17 @@
+[
+  {"cityName" : "延庆", "cityId": 101010800},
+  {"cityName" : "通州", "cityId": 101010600},
+  {"cityName" : "北京", "cityId": 101010100},
+  {"cityName" : "怀柔", "cityId": 101010500},
+  {"cityName" : "石景山", "cityId": 101011000},
+  {"cityName" : "丰台", "cityId": 101010900},
+  {"cityName" : "昌平", "cityId": 101010700},
+  {"cityName" : "密云", "cityId": 101011300},
+  {"cityName" : "朝阳", "cityId": 101010300},
+  {"cityName" : "海淀", "cityId": 101010200},
+  {"cityName" : "大兴", "cityId": 101011100},
+  {"cityName" : "房山", "cityId": 101011200},
+  {"cityName" : "平谷", "cityId": 101011500},
+  {"cityName" : "门头沟", "cityId": 101011400},
+  {"cityName" : "顺义", "cityId": 101010400}
+]

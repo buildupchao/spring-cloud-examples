@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${reportModel.title}"></title>
+    <script th:src="@{/js/jquery.min.js}" type="text/javascript"></script>
+    <script th:src="@{/js/bootstrap.js}" type="text/javascript"></script>
+    <script th:src="@{/js/report.js}" type="text/javascript"></script>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h2 th:text="${reportModel.title}"></h2>
+    </div>
+    <article class="jumbotron">
+        <div class="" style="margin-bottom: 10px">
+            <select class="select" id="selectCity">
+                <option th:each="city : ${reportModel.cityList}"
+                        th:value="${city.cityId}" th:text="${city.cityName}"
+                        th:selected="${city.cityId eq reportModel.cityId.toString()}"></option>
+            </select>
+        </div>
+
+        <h1 class="text-success" th:text="${reportModel.report.city}"></h1>
+        <p>
+            <label>空气质量指数:</label>
+            <span th:text="${reportModel.report.aqi}"></span>
+        </p>
+        <p>
+            <label>当前温度:</label>
+            <span th:text="${reportModel.report.wendu}"></span>
+        </p>
+        <p>
+            <label>温馨提示:</label>
+            <span th:text="${reportModel.report.ganmao}"></span>
+        </p>
+    </article>
+    <div class="row" style="margin-left: 5px;">
+        <div class="card border-info" th:each="newday : ${reportModel.report.forecast}">
+            <div class="card-body text-info">
+                <h4 class="card-text" th:text="${newday.date}"></h4>
+                <p class="card-text" th:text="${newday.type}"></p>
+                <p class="card-text">
+                    <span th:text="${newday.low}"></span>
+                    <span th:text="${newday.high}"></span>
+                </p>
+                <p class="card-text">
+                    <span th:text="${newday.fengxiang}"></span>
+                    <span th:text="${newday.fengli}"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="col-md-12 well text-center" style="background-color: #1d2124; color: #ececf6; padding: 10px 0; margin: 10px 0px;">
+        Copyright@buildupchao
+    </footer>
+</div>
+</body>
+</html>
